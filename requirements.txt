@@ -3,6 +3,6 @@ pandas
 scikit-learn
 joblib
 tpot
-tensorflow
+tensorflow==2.7.0
 keras==2.7.0
 streamlit
