@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd 
 import joblib
 
-model = joblib.load(open("nn_model.joblib","rb"))
+model = joblib.load("nn_model.joblib")
 
 def data_processing(df):
     """
