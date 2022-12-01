@@ -4,7 +4,7 @@ import streamlit as st
 import pandas as pd 
 import joblib
 
-model = joblib.load("nn_model.joblib")
+model = joblib.load("tree_model.joblib")
 
 def data_processing(df):
     """
@@ -128,17 +128,12 @@ with col1:
 
     df = data_processing(df=df)
 
-# #     maxI = max(index[0])
+    result = model.predict(df)
 
-#         i_old = np.where(index[0] == maxI)
-#         i = i_old[0][0]
-    
-    r = model.predict(df)
-    max_index = max(r[0])
+#     r = model.predict(df)
+#     max_index = max(r[0])
 
-    result = np.where(r[0] == max_index)[0][0]
-    print('RESULT == ', result)
-    print('df == ', df)
+#     result = np.where(r[0] == max_index)[0][0]
 
 
 
