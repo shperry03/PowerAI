@@ -1,4 +1,5 @@
 # deploying my model to streamlit cloud
+import numpy as np
 import streamlit as st
 import pandas as pd 
 import joblib
@@ -126,8 +127,18 @@ with col1:
     df = get()
 
     df = data_processing(df=df)
+
+# #     maxI = max(index[0])
+
+#         i_old = np.where(index[0] == maxI)
+#         i = i_old[0][0]
     
-    result = model.predict(df)
+    r = model.predict(df)
+    max_index = max(r[0])
+
+    result = np.where(r[0] == max_index)[0][0]
+    print('RESULT == ', result)
+    print('df == ', df)
 
 
 
