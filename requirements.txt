@@ -3,5 +3,5 @@ pandas
 scikit-learn
 joblib
 tpot
-tensorflow
+keras==2.10
 streamlit
